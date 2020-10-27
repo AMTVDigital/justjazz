@@ -5,11 +5,7 @@ License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl.html
 Tags: SEO, XML sitemap, Content analysis, Readability, Schema
 Tested up to: 5.5.1
-<<<<<<< HEAD
-Stable tag: 15.1.1
-=======
 Stable tag: 15.2
->>>>>>> a915dc995a11a338aaa45a2b7f377e58d0bdfa1b
 Requires PHP: 5.6.20
 
 Improve your WordPress SEO: Write better content and have a fully optimized WordPress site using the Yoast SEO plugin.
@@ -212,8 +208,6 @@ Your question has most likely been answered on our knowledge base: [kb.yoast.com
 
 == Changelog ==
 
-<<<<<<< HEAD
-=======
 = 15.2 =
 Release Date: October 27th, 2020
 
@@ -242,7 +236,6 @@ Other:
 * Removes the "Remind me in 7 days" link from the SEO data optimization notification on the Yoast SEO dashboard, which was shown for large sites with more than 2500 unindexed indexables. The notification can still be hidden by clicking the default dismiss button.
 * Adds the `wpseo_image_data` filter to enable the filtering of image metadata. Props to [spacedmonkey](https://github.com/spacedmonkey).
 
->>>>>>> a915dc995a11a338aaa45a2b7f377e58d0bdfa1b
 = 15.1.1 =
 Release Date: October 15th, 2020
 

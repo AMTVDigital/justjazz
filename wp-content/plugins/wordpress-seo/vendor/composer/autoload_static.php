@@ -4,11 +4,7 @@
 
 namespace Composer\Autoload;
 
-<<<<<<< HEAD
-class ComposerStaticInitf1e55b6cb407c1dcf1d6812e88662150
-=======
 class ComposerStaticInitc53b915dd8979f2173b5e23ed9d16a05
->>>>>>> a915dc995a11a338aaa45a2b7f377e58d0bdfa1b
 {
     public static $prefixLengthsPsr4 = array (
         'C' => 
@@ -549,7 +545,6 @@ class ComposerStaticInitc53b915dd8979f2173b5e23ed9d16a05
         'YoastSEO_Vendor\\Symfony\\Component\\DependencyInjection\\ParameterBag\\ParameterBag' => __DIR__ . '/../..' . '/vendor_prefixed/symfony/dependency-injection/ParameterBag/ParameterBag.php',
         'YoastSEO_Vendor\\Symfony\\Component\\DependencyInjection\\ParameterBag\\ParameterBagInterface' => __DIR__ . '/../..' . '/vendor_prefixed/symfony/dependency-injection/ParameterBag/ParameterBagInterface.php',
         'YoastSEO_Vendor\\Symfony\\Component\\DependencyInjection\\ResettableContainerInterface' => __DIR__ . '/../..' . '/vendor_prefixed/symfony/dependency-injection/ResettableContainerInterface.php',
-        'YoastSEO_Vendor\\Symfony\\Polyfill\\Intl\\Idn\\Idn' => __DIR__ . '/../..' . '/vendor_prefixed/symfony/polyfill-intl-idn/Idn.php',
         'Yoast\\WP\\Lib\\Migrations\\Adapter' => __DIR__ . '/../..' . '/lib/migrations/adapter.php',
         'Yoast\\WP\\Lib\\Migrations\\Column' => __DIR__ . '/../..' . '/lib/migrations/column.php',
         'Yoast\\WP\\Lib\\Migrations\\Constants' => __DIR__ . '/../..' . '/lib/migrations/constants.php',
@@ -896,15 +891,9 @@ class ComposerStaticInitc53b915dd8979f2173b5e23ed9d16a05
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-<<<<<<< HEAD
-            $loader->prefixLengthsPsr4 = ComposerStaticInitf1e55b6cb407c1dcf1d6812e88662150::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInitf1e55b6cb407c1dcf1d6812e88662150::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInitf1e55b6cb407c1dcf1d6812e88662150::$classMap;
-=======
             $loader->prefixLengthsPsr4 = ComposerStaticInitc53b915dd8979f2173b5e23ed9d16a05::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInitc53b915dd8979f2173b5e23ed9d16a05::$prefixDirsPsr4;
             $loader->classMap = ComposerStaticInitc53b915dd8979f2173b5e23ed9d16a05::$classMap;
->>>>>>> a915dc995a11a338aaa45a2b7f377e58d0bdfa1b
 
         }, null, ClassLoader::class);
     }
