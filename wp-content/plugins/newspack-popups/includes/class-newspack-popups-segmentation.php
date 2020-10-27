@@ -63,7 +63,7 @@ final class Newspack_Popups_Segmentation {
 	 * Should tracking code be inserted?
 	 */
 	public static function is_tracking() {
-		if ( is_admin() || self::is_admin_user() || Newspack_Popups_Settings::is_non_interactive() ) {
+		if ( is_admin() || self::is_admin_user() ) {
 			return false;
 		}
 		return true;
@@ -73,6 +73,10 @@ final class Newspack_Popups_Segmentation {
 	 * Insert amp-analytics scripts.
 	 */
 	public static function wp_enqueue_scripts() {
+		if ( ! self::is_tracking() ) {
+			return;
+		}
+
 		// Register AMP scripts explicitly for non-AMP pages.
 		if ( ! wp_script_is( 'amp-runtime', 'registered' ) ) {
 			// phpcs:ignore WordPress.WP.EnqueuedResourceParameters.MissingVersion
