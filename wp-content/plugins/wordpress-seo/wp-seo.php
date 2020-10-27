@@ -8,7 +8,11 @@
  *
  * @wordpress-plugin
  * Plugin Name: Yoast SEO
+<<<<<<< HEAD
  * Version:     15.1.1
+=======
+ * Version:     15.2
+>>>>>>> a915dc995a11a338aaa45a2b7f377e58d0bdfa1b
  * Plugin URI:  https://yoa.st/1uj
  * Description: The first true all-in-one SEO solution for WordPress, including on-page content analysis, XML sitemaps and much more.
  * Author:      Team Yoast

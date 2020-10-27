@@ -15,7 +15,11 @@ if ( ! function_exists( 'add_filter' ) ) {
  * {@internal Nobody should be able to overrule the real version number as this can cause
  *            serious issues with the options, so no if ( ! defined() ).}}
  */
+<<<<<<< HEAD
 define( 'WPSEO_VERSION', '15.1.1' );
+=======
+define( 'WPSEO_VERSION', '15.2' );
+>>>>>>> a915dc995a11a338aaa45a2b7f377e58d0bdfa1b
 
 
 if ( ! defined( 'WPSEO_PATH' ) ) {
