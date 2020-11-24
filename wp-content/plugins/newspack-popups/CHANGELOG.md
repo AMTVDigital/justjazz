@@ -1,3 +1,55 @@
+# [1.18.0](https://github.com/Automattic/newspack-popups/compare/v1.17.0...v1.18.0) (2020-11-24)
+
+
+### Bug Fixes
+
+* handle legacy config file path ([#317](https://github.com/Automattic/newspack-popups/issues/317)) ([7770f6a](https://github.com/Automattic/newspack-popups/commit/7770f6aec53e1a97bb43665e51e534a1b96d0626))
+
+
+### Features
+
+* Improve configuration file handling ([#315](https://github.com/Automattic/newspack-popups/issues/315)) ([be40334](https://github.com/Automattic/newspack-popups/commit/be403343f00963b9b754554f48fd19a06e068e96))
+* polyfill amp-analytics script ([#306](https://github.com/Automattic/newspack-popups/issues/306)) ([6066651](https://github.com/Automattic/newspack-popups/commit/6066651d75642967be52c0f6261c64fc49f68408)), closes [#193](https://github.com/Automattic/newspack-popups/issues/193)
+* reorganize editor sidebar and add notice when test mode is enabled ([#307](https://github.com/Automattic/newspack-popups/issues/307)) ([59e522c](https://github.com/Automattic/newspack-popups/commit/59e522c9a241da4d2b2e3a202af5fa52b81ba8a2)), closes [#310](https://github.com/Automattic/newspack-popups/issues/310)
+* retrieve client email and donor status from Mailchimp ([#305](https://github.com/Automattic/newspack-popups/issues/305)) ([4ffc44d](https://github.com/Automattic/newspack-popups/commit/4ffc44d112e4daf7b2a911a68fc0ccc2228bdd17)), closes [#304](https://github.com/Automattic/newspack-popups/issues/304)
+
+# [1.17.0](https://github.com/Automattic/newspack-popups/compare/v1.16.0...v1.17.0) (2020-11-11)
+
+
+### Bug Fixes
+
+* do not enqueue scripts if post has Campaigns disabled ([af32c62](https://github.com/Automattic/newspack-popups/commit/af32c623ec32e2cf27f831b615f14d980061b053))
+* handle MC4WP forms when assessing if campaign has newsletter form ([74cfbae](https://github.com/Automattic/newspack-popups/commit/74cfbaee27aa6e67a9ba523dc33123f2d39f1d81))
+* inject campaigns into posts and pages only ([#296](https://github.com/Automattic/newspack-popups/issues/296)) ([c162379](https://github.com/Automattic/newspack-popups/commit/c162379826ebaf799883f2db370d5f18af72405a))
+
+
+### Features
+
+* handle posts read count segmentation ([#289](https://github.com/Automattic/newspack-popups/issues/289)) ([c6024d2](https://github.com/Automattic/newspack-popups/commit/c6024d23ad02f5b874f3fe43982c6b5dcb199daf)), closes [#271](https://github.com/Automattic/newspack-popups/issues/271)
+* handle subscription, donation segmentation ([5fb405d](https://github.com/Automattic/newspack-popups/commit/5fb405dbd0326bef4c4c55902878dafe184ffae0)), closes [#249](https://github.com/Automattic/newspack-popups/issues/249) [#250](https://github.com/Automattic/newspack-popups/issues/250)
+* improve preview post ([#291](https://github.com/Automattic/newspack-popups/issues/291)) ([f7a5ba1](https://github.com/Automattic/newspack-popups/commit/f7a5ba1be80d25d6af8724b2de7e5e553515341f))
+* settings interop ([#206](https://github.com/Automattic/newspack-popups/issues/206)) ([466db2a](https://github.com/Automattic/newspack-popups/commit/466db2a21d758b378c0d510996f99959e0973910))
+
+# [1.16.0](https://github.com/Automattic/newspack-popups/compare/v1.15.1...v1.16.0) (2020-10-29)
+
+
+### Bug Fixes
+
+* allow only one overlay campaign per page ([#286](https://github.com/Automattic/newspack-popups/issues/286)) ([231d862](https://github.com/Automattic/newspack-popups/commit/231d862554a64c895b4af7c3238d8da5034c4199))
+
+
+### Features
+
+* handle non-amp amp-analytics submission event ([#283](https://github.com/Automattic/newspack-popups/issues/283)) ([44e7587](https://github.com/Automattic/newspack-popups/commit/44e7587143ac9389df6d627acbaa37729fe802dc)), closes [#200](https://github.com/Automattic/newspack-popups/issues/200) [#257](https://github.com/Automattic/newspack-popups/issues/257)
+* suppression donation campaigns for donors ([1f53b60](https://github.com/Automattic/newspack-popups/commit/1f53b60a94f7d5be095d5212a98c184de60ada5f)), closes [#141](https://github.com/Automattic/newspack-popups/issues/141)
+
+## [1.15.1](https://github.com/Automattic/newspack-popups/compare/v1.15.0...v1.15.1) (2020-10-28)
+
+
+### Bug Fixes
+
+* add posts_read array to legacy client data ([#281](https://github.com/Automattic/newspack-popups/issues/281)) ([126a5f3](https://github.com/Automattic/newspack-popups/commit/126a5f330f133dc6446dda427b36851f054e726f))
+
 # [1.15.0](https://github.com/Automattic/newspack-popups/compare/v1.14.0...v1.15.0) (2020-10-27)
 
 

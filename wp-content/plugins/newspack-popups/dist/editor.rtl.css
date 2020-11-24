@@ -1642,3 +1642,8 @@ body[class*="admin_page_newspack-"] #wpfooter:before {
 .block-editor-post-preview__button-toggle {
   display: none; }
 
+.newspack-popups__status-options {
+  margin: 1rem 0; }
+  .newspack-popups__status-options .components-base-control .components-base-control__help {
+    margin-top: 4px; }
+

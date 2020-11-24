@@ -6,7 +6,7 @@ Author: Automattic
 Author URI: https://newspack.blog
 Description:
 Requires at least: WordPress 4.9.6
-Version: 1.21.0
+Version: 1.21.2
 License: GNU General Public License v2 or later
 License URI: LICENSE
 Text Domain: newspack
@@ -3092,7 +3092,8 @@ div.sharedaddy .sd-social h3.sd-title,
   margin-bottom: 0;
 }
 
-.page:not(.home) article.page > .post-thumbnail {
+.page .entry-header + .post-thumbnail,
+.page .main-content > .post-thumbnail:first-child {
   margin-top: 1.5rem;
 }
 
@@ -3342,6 +3343,12 @@ div.sharedaddy .sd-social h3.sd-title,
 .featured-image-behind .entry-meta .byline {
   display: inline-block;
   margin-left: 1rem;
+}
+
+@media only screen and (min-width: 782px) {
+  .page .featured-image-behind .entry-header {
+    margin-bottom: 3rem;
+  }
 }
 
 .featured-image-beside > .wrapper {
@@ -4479,6 +4486,10 @@ div.sharedaddy .sd-social h3.sd-title,
 
 .single #secondary {
   padding-top: calc( 1rem * 1.5);
+}
+
+.page #secondary {
+  padding-top: 1rem;
 }
 
 .above-content {
@@ -5886,6 +5897,20 @@ figcaption,
   font-size: 0.7em;
   font-family: -apple-system, blinkmacsystemfont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   line-height: 1.6;
+}
+
+.entry-content .wp-caption-text,
+.entry-content figcaption {
+  max-width: 780px;
+}
+
+.newspack-front-page .entry-content .wp-caption-text,
+.newspack-front-page .entry-content figcaption,
+.post-template-single-wide .entry-content .wp-caption-text,
+.post-template-single-wide .entry-content figcaption,
+.page-template-single-wide .entry-content .wp-caption-text,
+.page-template-single-wide .entry-content figcaption {
+  max-width: 1200px;
 }
 
 /*--------------------------------------------------------------
