@@ -6,11 +6,12 @@ Author: Automattic
 Author URI: https://newspack.blog
 Description:
 Requires at least: WordPress 4.9.6
-Version: 1.22.0
+Version: 1.23.0
 License: GNU General Public License v2 or later
 License URI: LICENSE
 Text Domain: newspack
 Tags:
+AMP: true
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
@@ -2761,6 +2762,10 @@ body.h-db.h-dh .site-header .nav3 .menu-highlight a:hover {
   display: none;
 }
 
+.show-updated .entry-header .updated:not(.published) {
+  display: inline-block;
+}
+
 .page-links {
   clear: both;
   margin: 0 0 calc( 1.5 * 1rem);
@@ -2881,6 +2886,10 @@ amp-script .cat-links {
 .entry-meta .posted-on a,
 .entry-meta .posted-on a:visited {
   color: #515151;
+}
+
+.entry-meta .updated-label {
+  margin-left: 1em;
 }
 
 .entry-footer {
@@ -4184,6 +4193,7 @@ div.sharedaddy .sd-social h3.sd-title,
 
 .site-footer a {
   color: #515151;
+  transition: opacity 110ms ease-in-out;
 }
 
 .site-footer .footer-branding .wrapper {
