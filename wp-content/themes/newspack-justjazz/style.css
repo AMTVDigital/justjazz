@@ -441,9 +441,13 @@ margin-bottom:0;
 /*--------------------------------------------------------------
 ## Footer
 --------------------------------------------------------------*/
+
 /* Site footer */
 .site-footer {
   margin: 2rem 0 0;
+  	border-top: none;
+	background-color: #4d648d;	
+	color: #fff;
 }
 
 .site-footer a {
@@ -465,12 +469,6 @@ margin-bottom:0;
 }
 
 
-.site-footer {
-	border-top: none;
-	background-color: #4d648d;	
-	color: #fff;
-}
-
 .site-footer .menu-footer-menu-container {
 	color: #fff;
 }
@@ -481,8 +479,9 @@ margin-bottom:0;
 }
 
 .site-footer .footer-branding .footer-logo-link {
-	display:none
+	display:none;
 }
+
 
 .site-footer .imprint {
 	display:none;
