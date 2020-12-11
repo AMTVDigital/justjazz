@@ -1,5 +1,5 @@
 /*
-Theme Name: Newspack Child
+Theme Name: Newspack Just Jazz
 Theme URI: https://github.com/Automattic/newspack-theme
 Template: newspack-theme
 Author: Automattic
@@ -9,9 +9,8 @@ Updated: 2020-07-15 19:14:13
 
 */
 
-<<<<<<< HEAD
 
-/* === Angel City Customizations === */
+/* === Just Jazz Customizations === */
 
 
 /* Navigation */
@@ -147,9 +146,6 @@ textarea {
 
 
 
-/* === Angel City Customizations === */
-
-
 /* this removes something */
 .site-info .imprint{ 
 	display: none;
@@ -167,70 +163,7 @@ textarea {
 }
 
 
-/* this hides author and date from posts in the watch category */
-.category-watch .entry-meta   {
-	display:none;
-}
 
-/* this hides author and date from posts in the 2020 VR Festival category */
-.category-2020-vr-festival .entry-meta   {
-	display:none;
-}
-
-
-
-/* this removes header margin on ACJ Festival landing page */
-.page-id-130 .site-content,
-.page-id-130 .entry .entry-content:first-child,
-.page-id-3285 .site-content,
-.page-id-3285 .entry .entry-content:first-child {
- margin-top: 0;
- margin-bottom: 0;	
-}
-
-
-/* this removes header margin on Explorations landing page */
-.page-id-559 .site-content,
-.page-id-559 .entry .entry-content:first-child {
- margin-top: 0;
- margin-bottom: 0;	
-}
-
-
-/* LA Creators */
-.tag-la-creators .entry-content .wp-block-group .wp-block-group__inner-container:first-child {
-    padding-top: 20px;
-}
-
-.tag-la-creators .entry-footer {
-	margin-bottom: 20px;
-	margin-top: 0;
-}
-
-/*making youtube vids the same height in ornette coleman post*/
-.postid-1687 .wp-block-column .wp-block-embed-youtube iframe {
-	max-height: 290px;
-}
-
-
-/* this removes header margin on Watch landing page */
-.page-id-531 .site-content,
-.page-id-531 .entry .entry-content:first-child {
- margin-top: 0;
- margin-bottom: 0;	
-}
-
-/* this removes header margin on Festival Video landing page */
-.page-id-3208 .site-content,
-.page-id-3208 .entry .entry-content:first-child {
- margin-top: 0;
- margin-bottom: 0;	
-}
-
-/* this removes header margin on Young Artist Competition landing page */
-.page-id-465 .site-content {
- margin-top: 0;
-}
 
 /*adding bottom margin to commerce and 404 pages */
 .entry .entry-content .woocommerce > :last-child,
@@ -241,20 +174,6 @@ textarea {
 	
 
 
-
-
-/* this adjusts the header margin on pages *
-.page-template-default .entry-header {
-=======
-.site-info .imprint{
-	display: none;
-}
-
-.single .entry-subhead {
-  display: none;
-}
-
-
 /* this removes the margin between the top container on pages */
 .page .site-content {
  margin-top:0;
@@ -262,12 +181,11 @@ textarea {
 
 /* this adjusts the header margin on pages */
 .page .entry-header {
->>>>>>> 0684dff50ad88161f19338cc90d4beb6fc613879
  margin-top: 30px;
  margin-bottom: 15px;	
 }
 
-<<<<<<< HEAD
+
 /* Groups, Covers and Columns */ 
 
 
@@ -306,7 +224,7 @@ textarea {
 /* this removes the vertical margins between containers on pages; the margin-top also removed space between paragraphs */
 .entry .entry-content .no-vertical-margin,
 .entry .entry-content .no-horizontal-margin {
-=======
+
 /* this removes the margin between the top container on the front page */
 .newspack-front-page .entry .entry-content  > * {
 margin-top:0;
@@ -315,27 +233,20 @@ margin-bottom:0;
 
 /* this removes the margins between containers on pages; the margin-top also removed space between paragraphs */
 .page-template-single-wide .entry .entry-content > * {
->>>>>>> 0684dff50ad88161f19338cc90d4beb6fc613879
 margin-top:0;
 margin-bottom:0;
 }
 
-<<<<<<< HEAD
 
-
-/* this removes the horizontal margins between columns with the class .no-horizontal-margin */
-.entry .entry-content .no-horizontal-margin .wp-block-columns > .wp-block-column {
-=======
 /* this removes the margins between columns with the class .nomargin */
 .nomargin .wp-block-columns .wp-block-column {
->>>>>>> 0684dff50ad88161f19338cc90d4beb6fc613879
 margin-left: 0;
 margin-right: 0;
 margin-top:0;
 margin-bottom:0;	
 }
 
-<<<<<<< HEAD
+
 /* removes the top and bottom margin for a cover with columns */
 .entry .entry-content .wp-block-cover__inner-container .wp-block-columns .wp-block-column {
     margin-left: 10px;
@@ -344,59 +255,12 @@ margin-bottom:0;
     margin-bottom: 0;
 }
 
-/*still working on the supporters block
-.entry .entry-content .programs .wp-block-cover__inner-container > * {
-    margin: inherit;
-}    
-
-
-/* controls the margins in the supporters block */
-.entry .entry-content .supporters .wp-block-group__inner-container > *  {
-    margin-bottom: 0px;
-    margin-top: 0px;
-}
-
-.supporters .wp-block-columns .wp-block-column > * {
-    margin-bottom: 0px;
-    margin-top: 16px;
-}
-
-
-
-
-/* this removes the negative margin in the supporter column on the festival page */
-.page-template-single-wide .entry .entry-content .supporters .wp-block-group.has-background + .wp-block-group.has-background {
-=======
-
-
-/* this removes the negative margin in the supporter column on the festival page */
-.page-template-single-wide .entry .entry-content .wp-block-group.has-background + .wp-block-group.has-background {
->>>>>>> 0684dff50ad88161f19338cc90d4beb6fc613879
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-
-
-
-/* this removes the borders in the supporters block */
-<<<<<<< HEAD
-
-
-.entry .entry-content .wp-block-separator, .entry .entry-content hr {
-    display: none;
-}
-
-
-
-=======
 .entry .entry-content .wp-block-separator, .entry .entry-content hr {
     border: 0;
     height: 0;
     margin: 0;
 }
 
->>>>>>> 0684dff50ad88161f19338cc90d4beb6fc613879
 .wp-block-columns.is-style-borders > .wp-block-column::after {
 	  border: 0;
 }
@@ -470,13 +334,12 @@ margin-bottom:0;
   font-size: 20px;
 }
  */
->>>>>>> 0684dff50ad88161f19338cc90d4beb6fc613879
  
 .tribe-events-view {
  position:relative;
 }
 
-<<<<<<< HEAD
+
 /* ### Events grid using homepage blocks - Making subtitle bold  */
 
 .events-grid article .entry-wrapper p,
@@ -627,12 +490,9 @@ margin-bottom:0;
  
 .tribe-common--breakpoint-medium.tribe-events-pro .tribe-events-pro-photo__event {
   margin-bottom: 30px;
->>>>>>> 0684dff50ad88161f19338cc90d4beb6fc613879
 }
 
 
-
-<<<<<<< HEAD
 
 /* left / right padding between events; margin underneath in grid */
 .tribe-common .tribe-common-g-row--gutters > .tribe-common-g-col {
@@ -691,7 +551,6 @@ width: 17%;
 
 
 /* trying https://theeventscalendar.com/knowledgebase/k/how-to-customize-templates-and-css-in-a-view/ */
->>>>>>> 0684dff50ad88161f19338cc90d4beb6fc613879
 .tribe-events-pro .tribe-events-pro-photo__event-featured-image-link {
   position: relative;
 }
@@ -720,7 +579,7 @@ width: 17%;
   text-transform: uppercase;
 }
 
-<<<<<<< HEAD
+
 
  
  /* WooCommerce 3.0 Gallery */
@@ -858,33 +717,219 @@ credit: https://gist.github.com/vanbo/c05e9b9512bd53e3680c82e1c6e4e6a3
 
 .woocommerce-tabs ul li {
     margin: 0;
-=======
+}
+
 /* stuff the child theme did not pick up */
+
+/* Background color for secondary menu */ 
+.h-sb .top-header-contain {
+ background-color:#4d648d;
+ border-bottom:1px solid #005a87
+}
+
+
+/* Colors for donate button */ 
+.h-sb .nav3 a {
+ background-color:#4d648d;
+ color:#fff
+}
+.nav3 li a:hover,
+.nav3 li a:focus,
+.h-sb .nav3 li a:hover,
+.h-sb .nav3 li a:focus {
+ background-color:#005a87;
+ color:#fff;
+ opacity:1
+}
+
+
+/*title size on posts */
+@media only screen and (min-width: 782px) {
+ .single .entry-title {
+  font-size:2.2em;
+ }
+}
+@media only screen and (min-width: 1168px) {
+ .single .entry-title {
+  font-size:2.2em
+ }
+}
+
+
+
+/* Colors for category links */ 
+
+.cat-links a {
+    background-color: #4d648d;
+    color: #fff;
+    display: inline-block;
+    margin: 0 .25rem .25rem 0;
+    padding: .35em .5em;
+}
+
+.cat-links a:hover,
+.cat-links a:focus {
+ background-color:#005a87;
+ color:#fff;
+ opacity:1
+}
+
+
+/* Removing header margin on landing and category pages */ 
+
+.page-template-single-wide .entry-header {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+
+.entry .entry-content .wp-block-group.nomargin {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+/* Hiding titles on landing and category pages  */
+
+.page-id-1553 h1.entry-title,
+.page-id-951 h1.entry-title,
+.page-id-1530 h1.entry-title,
+.page-id-1203 h1.entry-title,
+.page-id-793 h1.entry-title,
+.page-id-178 h1.entry-title,
+.page-id-1711 h1.entry-title,
+.page-id-1505 h1.entry-title,
+.page-id-1414 h1.entry-title,
+.page-id-1478 h1.entry-title,
+.page-id-1661 h1.entry-title
+{
+	display:none;
+	    margin-top: 0;
+    margin-bottom: 0;
+}
+
+
+.h-sb .middle-header-contain {
+    background-color: #000;
+}
+
+.playerblock {
+	align-self: center;
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.textwidget .wp-block-code {
+	border:none;
+	padding: none;
+}
+
+
+/* Grid style */
+.display-posts-listing.grid {
+	display: grid;
+	grid-gap: 16px;
+}
+
+.display-posts-listing.grid .title {
+	display: block;
+	color: inherit;
+  text-decoration: none;
+	font-size: 1.4em;
+	font-weight: 700;
+	margin: 0;
+}
+
+.display-posts-listing.grid img { 
+	display: block; 
+	max-width: 100%; 
+	height: auto; 
+}
+
+@media (min-width: 600px) {
+	.display-posts-listing.grid {
+		grid-template-columns: repeat( 2, 1fr );
+	}
+}
+
+@media (min-width: 1024px) {
+	.display-posts-listing.grid {
+		grid-template-columns: repeat( 3, 1fr );
+	}
+}
+
+.site-footer .imprint {
+	display:none;
+}
+
+/* Remove author from show pages */
+.category-just-jazz-cafe .featured-image-beside .entry-header .entry-meta .byline,
+.category-just-jazz-concert-series .featured-image-beside .entry-header .entry-meta .byline,
+.category-jazz-musicians-unite-against-racism .featured-image-beside .entry-header .entry-meta .byline{ 
+	display: none; 
+}
+
+/* Remove bullets from slider */
+.wp-block-newspack-blocks-carousel .swiper-pagination-bullets { 
+	display: none; 
+}
+
+
+
+/*--------------------------------------------------------------
+## Footer
+--------------------------------------------------------------*/
+/* Site footer */
+.site-footer {
+  margin: 2rem 0 0;
+}
+
+.site-footer a {
+  color: #fff;
+  transition: opacity 110ms ease-in-out;
+}
+
+
+.site-footer a:hover
+{
+	color: #fff;
+	opacity: .75;
+}
+
+
+.site-footer .widget-title {
+  color: #fff;
+  font-size: inherit;
+}
+
+
+.site-footer {
+	border-top: none;
+	background-color: #4d648d;	
+	color: #fff;
+}
+
+.site-footer .menu-footer-menu-container {
+	color: #fff;
+}
+
+
+.site-footer .footer-branding .wrapper {
+	border-top: none;	
+}
+
+.site-footer .footer-branding .footer-logo-link {
+	display:none
+}
+
+.site-info {
+	background-color: #1e1f26;
+	color: #fff;
+}
+
+.site-info .site-info-contain:first-child {
+    border-top: none;
+    padding-top: 1rem;
+}
+
 	
-		
-.accent-header,
-.article-section-title {
-	text-transform: uppercase;
-}
 
-.accent-header, .article-section-title,
-.entry .entry-footer a:hover {
-	color: #2b2b2e;
-}
-
-#secondary .widget-title {
-  font-size: 1em;
->>>>>>> 0684dff50ad88161f19338cc90d4beb6fc613879
-}
-
-
-
-<<<<<<< HEAD
-
-
-
-
-
-
-=======
->>>>>>> 0684dff50ad88161f19338cc90d4beb6fc613879
