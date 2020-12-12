@@ -32,3 +32,30 @@ add_action( 'wp_enqueue_scripts', 'child_theme_configurator_css', 20 );
 
 // END ENQUEUE PARENT ACTION
 
+/* Custom image sizes 
+
+add_image_size ('video-thumbnail', 1280, 720,TRUE);
+
+/* Display custom image sizes 
+add_filter ( 'image_size_names_choose','justjazz_custom_image_sizes' );
+function justjazz_custom_image_sizes ( $sizes ) {
+return array_merge ( $sizes, array (
+'video-thumbnail' => __( 'Cropped' ),
+) );
+}
+*/
+
+
+
+// use priority 11 to hook into after_setup_theme AFTER the parent theme
+ add_action('after_setup_theme', 'reset_parent_setup', 11);
+
+function reset_parent_setup() 
+{
+    // Override the image sizes
+	add_image_size( 'newspack-featured-image', 1280, 720, true );
+	add_image_size( 'newspack-archive-image', 800, 600, true );
+	add_image_size( 'newspack-footer-logo', 400, 9999, true );
+
+}		
+		
