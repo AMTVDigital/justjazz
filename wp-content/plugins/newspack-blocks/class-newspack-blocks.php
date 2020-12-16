@@ -360,6 +360,7 @@ class Newspack_Blocks {
 			'has_password'        => false,
 		);
 		if ( $specific_mode && $specific_posts ) {
+			$args['nopaging'] = true;
 			$args['post__in'] = $specific_posts;
 			$args['orderby']  = 'post__in';
 		} else {
@@ -633,6 +634,47 @@ class Newspack_Blocks {
 	 */
 	public static function use_experimental() {
 		return defined( 'NEWSPACK_BLOCKS_EXPERIMENTAL' ) && NEWSPACK_BLOCKS_EXPERIMENTAL;
+	}
+
+	/**
+	 * Closure for excerpt filtering that can be added and removed.
+	 *
+	 * @var newspack_blocks_excerpt_length_closure
+	 */
+	public static $newspack_blocks_excerpt_length_closure = null;
+
+	/**
+	 * Filter for excerpt length.
+	 *
+	 * @param array $attributes The block's attributes.
+	 */
+	public static function filter_excerpt_length( $attributes ) {
+		// If showing excerpt, filter the length using the block attribute.
+		if ( $attributes['showExcerpt'] ) {
+			self::$newspack_blocks_excerpt_length_closure = add_filter(
+				'excerpt_length',
+				function( $length ) use ( $attributes ) {
+					if ( $attributes['excerptLength'] ) {
+						return $attributes['excerptLength'];
+					}
+					return 55;
+				},
+				999
+			);
+		}
+	}
+
+	/**
+	 * Remove excerpt length filter after Homepage Posts block loop.
+	 */
+	public static function remove_excerpt_length_filter() {
+		if ( self::$newspack_blocks_excerpt_length_closure ) {
+			remove_filter(
+				'excerpt_length',
+				self::$newspack_blocks_excerpt_length_closure,
+				999
+			);
+		}
 	}
 }
 Newspack_Blocks::init();

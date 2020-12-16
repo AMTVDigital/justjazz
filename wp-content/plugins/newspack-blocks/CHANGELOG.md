@@ -1,3 +1,24 @@
+## [1.17.1](https://github.com/Automattic/newspack-blocks/compare/v1.17.0...v1.17.1) (2020-12-15)
+
+
+### Bug Fixes
+
+* **api:** fallback to standard if post_format is false ([#649](https://github.com/Automattic/newspack-blocks/issues/649)) ([77028aa](https://github.com/Automattic/newspack-blocks/commit/77028aa23a96325398d437a2461a864641034b9b))
+* respect excerpt length attribute in load more display ([#648](https://github.com/Automattic/newspack-blocks/issues/648)) ([aef87ba](https://github.com/Automattic/newspack-blocks/commit/aef87baeebc46e9068855eec62b74c14a20f2619))
+* sanitize post id arrays in includes and excludes ([#651](https://github.com/Automattic/newspack-blocks/issues/651)) ([b1b50bd](https://github.com/Automattic/newspack-blocks/commit/b1b50bd6e35bb19103c5076703866a92d2770930))
+
+# [1.17.0](https://github.com/Automattic/newspack-blocks/compare/v1.16.0...v1.17.0) (2020-12-09)
+
+
+### Bug Fixes
+
+* disable paging in specific posts mode ([#640](https://github.com/Automattic/newspack-blocks/issues/640)) ([9ea01e5](https://github.com/Automattic/newspack-blocks/commit/9ea01e55d0621687c26bf044331bfcaa4eb59b87))
+
+
+### Features
+
+* control to select default tab in donate block ([#643](https://github.com/Automattic/newspack-blocks/issues/643)) ([46c730b](https://github.com/Automattic/newspack-blocks/commit/46c730b1f5af5732876cb66236993b2800b43199))
+
 # [1.16.0](https://github.com/Automattic/newspack-blocks/compare/v1.15.0...v1.16.0) (2020-11-24)
 
 

@@ -736,6 +736,7 @@ function newspack_customize_register( $wp_customize ) {
 				'small'  => esc_html__( 'Small', 'newspack' ),
 				'behind' => esc_html__( 'Behind article title', 'newspack' ),
 				'beside' => esc_html__( 'Beside article title', 'newspack' ),
+				'above'  => esc_html__( 'Above article title', 'newspack' ),
 				'hidden' => esc_html__( 'Hidden', 'newspack' ),
 			),
 			'section' => 'post_default_settings',
@@ -864,9 +865,38 @@ function newspack_customize_register( $wp_customize ) {
 				'small'  => esc_html__( 'Small', 'newspack' ),
 				'behind' => esc_html__( 'Behind article title', 'newspack' ),
 				'beside' => esc_html__( 'Beside article title', 'newspack' ),
+				'above'  => esc_html__( 'Above article title', 'newspack' ),
 				'hidden' => esc_html__( 'Hidden', 'newspack' ),
 			),
 			'section' => 'page_default_settings',
+		)
+	);
+
+	/**
+	 * Archive settings
+	 */
+	$wp_customize->add_section(
+		'archive_options',
+		array(
+			'title' => esc_html__( 'Archive Settings', 'newspack' ),
+			'panel' => 'newspack_template_settings',
+		)
+	);
+
+	// Add option to show excerpts for all archives.
+	$wp_customize->add_setting(
+		'archive_show_excerpt',
+		array(
+			'default'           => false,
+			'sanitize_callback' => 'newspack_sanitize_checkbox',
+		)
+	);
+	$wp_customize->add_control(
+		'archive_show_excerpt',
+		array(
+			'type'    => 'checkbox',
+			'label'   => esc_html__( 'Show excerpts for all archives', 'newspack' ),
+			'section' => 'archive_options',
 		)
 	);
 
@@ -1240,6 +1270,7 @@ function newspack_sanitize_feature_image_position( $choice ) {
 		'small',
 		'behind',
 		'beside',
+		'above',
 		'hidden',
 	);
 

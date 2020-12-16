@@ -108,8 +108,6 @@ abstract class Wizard {
 		wp_register_script( 'newspack_data', '', [], '1.0', false );
 
 		$urls = [
-			'checklists'  => Checklists::get_urls(),
-			'wizards'     => Wizards::get_urls(),
 			'dashboard'   => Wizards::get_url( 'dashboard' ),
 			'public_path' => Newspack::plugin_url() . '/dist/',
 			'bloginfo'    => [
@@ -118,7 +116,8 @@ abstract class Wizard {
 		];
 
 		$aux_data = [
-			'is_e2e' => Starter_Content::is_e2e(),
+			'is_e2e'        => Starter_Content::is_e2e(),
+			'is_debug_mode' => Newspack::is_debug_mode(),
 		];
 
 		wp_localize_script( 'newspack_data', 'newspack_urls', $urls );

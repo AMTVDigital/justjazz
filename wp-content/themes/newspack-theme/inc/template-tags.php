@@ -110,10 +110,10 @@ if ( ! function_exists( 'newspack_posted_by' ) ) :
 
 					$i++;
 					if ( $author_count === $i ) :
-						/* translators: separates last two author names; needs a space on either side. */
+						/* translators: separates last two names; needs a space on either side. */
 						$sep = esc_html__( ' and ', 'newspack' );
 					elseif ( $author_count > $i ) :
-						/* translators: separates all but the last two author names; needs a space at the end. */
+						/* translators: separates all but the last two names; needs a space at the end. */
 						$sep = esc_html__( ', ', 'newspack' );
 					else :
 						$sep = '';
@@ -316,9 +316,18 @@ if ( ! function_exists( 'newspack_post_thumbnail' ) ) :
 							'object-fit' => 'cover',
 						)
 					);
-
 				else :
-					the_post_thumbnail( 'newspack-featured-image' );
+
+					if ( 'above' === newspack_featured_image_position() ) :
+						the_post_thumbnail(
+							'newspack-featured-image',
+							array(
+								'layout' => 'responsive',
+							)
+						);
+					else :
+						the_post_thumbnail( 'newspack-featured-image' );
+					endif;
 
 					$caption = get_the_excerpt( get_post_thumbnail_id() );
 					// Check the existance of the caption separately, so filters -- like ones that add ads -- don't interfere.

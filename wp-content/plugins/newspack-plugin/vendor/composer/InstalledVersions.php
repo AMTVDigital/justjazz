@@ -1,5 +1,15 @@
 <?php
 
+
+
+
+
+
+
+
+
+
+
 namespace Composer;
 
 use Composer\Semver\VersionParser;
@@ -19,7 +29,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => '56237670623de3341b7fa57dfd0f352ef38bffc0',
+    'reference' => '236cb821c321e17a6d99895395744c9c407cc6fe',
     'name' => 'automattic/newspack-plugin',
   ),
   'versions' => 
@@ -31,7 +41,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => '56237670623de3341b7fa57dfd0f352ef38bffc0',
+      'reference' => '236cb821c321e17a6d99895395744c9c407cc6fe',
     ),
     'composer/installers' => 
     array (

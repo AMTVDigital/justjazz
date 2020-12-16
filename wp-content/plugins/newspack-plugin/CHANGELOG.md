@@ -1,3 +1,82 @@
+# [1.27.0](https://github.com/Automattic/newspack-plugin/compare/v1.26.0...v1.27.0) (2020-12-15)
+
+
+### Bug Fixes
+
+* **campaigns-wizard:** empty section ([33f055b](https://github.com/Automattic/newspack-plugin/commit/33f055bcad7d7d303fe6efddb92f2b9cf0553995))
+* update newspack-popups constant name ([#733](https://github.com/Automattic/newspack-plugin/issues/733)) ([2c800fe](https://github.com/Automattic/newspack-plugin/commit/2c800feac26f0363707bb448ea179fd1ea844ac6))
+
+
+### Features
+
+* improve debug mode ([56992a7](https://github.com/Automattic/newspack-plugin/commit/56992a70cb6abc9e1401948f6a0d5b346ba267bb))
+* update dashboard header style ([#732](https://github.com/Automattic/newspack-plugin/issues/732)) ([a4ac3da](https://github.com/Automattic/newspack-plugin/commit/a4ac3da8c9be6a27ca785f194fb79c4faf6ecded))
+* update info button icon to use Gutenberg ([#735](https://github.com/Automattic/newspack-plugin/issues/735)) ([5b11ce5](https://github.com/Automattic/newspack-plugin/commit/5b11ce577bea601c0cf5643a856e98001d90c40d))
+* update SelectControl and Popover style since WP 5.6 ([#731](https://github.com/Automattic/newspack-plugin/issues/731)) ([c06d444](https://github.com/Automattic/newspack-plugin/commit/c06d44437b032a992dca15e1be84e9bb0d9de430)), closes [#736](https://github.com/Automattic/newspack-plugin/issues/736)
+* update toggle group and toggle control vertical alignment ([e35bf7f](https://github.com/Automattic/newspack-plugin/commit/e35bf7f2d73f6cad1c8fb7a9844fdebd46c7a7ac))
+* **popups-wizard:** handle above header placement ([#691](https://github.com/Automattic/newspack-plugin/issues/691)) ([a1f2125](https://github.com/Automattic/newspack-plugin/commit/a1f21256a4fd113e3701b8f5db4bd93887b38c53))
+
+# [1.26.0](https://github.com/Automattic/newspack-plugin/compare/v1.25.0...v1.26.0) (2020-12-08)
+
+
+### Features
+
+* design adjustments to the wizards ([#728](https://github.com/Automattic/newspack-plugin/issues/728)) ([b5be729](https://github.com/Automattic/newspack-plugin/commit/b5be7298544b8f56276d7b551ee43f9db4ca01dc))
+* **ga:** report single category if primary category is set ([57d3b01](https://github.com/Automattic/newspack-plugin/commit/57d3b011fd2814c5ccf9b6b2d211f29261d0f914))
+* necessary WooComm settings for Checkout to work correctly ([c01e515](https://github.com/Automattic/newspack-plugin/commit/c01e51534476666c8a9c112027316edb8473a156))
+* remove laterpay ([#723](https://github.com/Automattic/newspack-plugin/issues/723)) ([f1ed5c3](https://github.com/Automattic/newspack-plugin/commit/f1ed5c3a6954ddcf8e1168a5c24a326c1ca1cbd0))
+* update checkbox style to match Gutenberg ([#724](https://github.com/Automattic/newspack-plugin/issues/724)) ([e2fadf5](https://github.com/Automattic/newspack-plugin/commit/e2fadf5e8f0d840e1d8a6169d48ad9a121a94ff9))
+* update radio style to match Gutenberg ([#725](https://github.com/Automattic/newspack-plugin/issues/725)) ([2249ad5](https://github.com/Automattic/newspack-plugin/commit/2249ad567ad5f488c07087e2b8e52c5a41462da4))
+* wizards redesign and cleanup ([#705](https://github.com/Automattic/newspack-plugin/issues/705)) ([40e6288](https://github.com/Automattic/newspack-plugin/commit/40e62883b7b125c3fc073ca854dd05f514063789))
+
+# [1.25.0](https://github.com/Automattic/newspack-plugin/compare/v1.24.0...v1.25.0) (2020-12-02)
+
+
+### Bug Fixes
+
+* typo ([abaa10a](https://github.com/Automattic/newspack-plugin/commit/abaa10a740e97e451455ffba879834eaea8a3f63))
+
+
+### Features
+
+* allow adding external custom dimensions ([#685](https://github.com/Automattic/newspack-plugin/issues/685)) ([b11b7e6](https://github.com/Automattic/newspack-plugin/commit/b11b7e6dc0e767ee3b1a28809eed9066524e58fc))
+* update Dashboard icons to use G2 ([#712](https://github.com/Automattic/newspack-plugin/issues/712)) ([97d8986](https://github.com/Automattic/newspack-plugin/commit/97d89861e2855b876023f3cd18a0cec28be647b2))
+* update Wizards icons to use G2 ([#714](https://github.com/Automattic/newspack-plugin/issues/714)) ([e66c19b](https://github.com/Automattic/newspack-plugin/commit/e66c19bf7a9e769bd43c411259285c49ae7ace24))
+* **campaigns-wizard:** display segment reach ([#709](https://github.com/Automattic/newspack-plugin/issues/709)) ([b700292](https://github.com/Automattic/newspack-plugin/commit/b70029251b081f69fe1215f7607f6df792e88883))
+
+# [1.25.0](https://github.com/Automattic/newspack-plugin/compare/v1.24.0...v1.25.0) (2020-12-02)
+
+
+### Bug Fixes
+
+* typo ([abaa10a](https://github.com/Automattic/newspack-plugin/commit/abaa10a740e97e451455ffba879834eaea8a3f63))
+
+
+### Features
+
+* allow adding external custom dimensions ([#685](https://github.com/Automattic/newspack-plugin/issues/685)) ([b11b7e6](https://github.com/Automattic/newspack-plugin/commit/b11b7e6dc0e767ee3b1a28809eed9066524e58fc))
+* update Dashboard icons to use G2 ([#712](https://github.com/Automattic/newspack-plugin/issues/712)) ([97d8986](https://github.com/Automattic/newspack-plugin/commit/97d89861e2855b876023f3cd18a0cec28be647b2))
+* update Wizards icons to use G2 ([#714](https://github.com/Automattic/newspack-plugin/issues/714)) ([e66c19b](https://github.com/Automattic/newspack-plugin/commit/e66c19bf7a9e769bd43c411259285c49ae7ace24))
+* **campaigns-wizard:** display segment reach ([#709](https://github.com/Automattic/newspack-plugin/issues/709)) ([b700292](https://github.com/Automattic/newspack-plugin/commit/b70029251b081f69fe1215f7607f6df792e88883))
+
+# [1.24.0](https://github.com/Automattic/newspack-plugin/compare/v1.23.0...v1.24.0) (2020-11-11)
+
+
+### Bug Fixes
+
+* **campaigns-wizard:** layout issues ([#692](https://github.com/Automattic/newspack-plugin/issues/692)) ([9fd3a59](https://github.com/Automattic/newspack-plugin/commit/9fd3a59ab98379cbc3ae2ee3b1779020589bfed2))
+
+
+### Features
+
+* add a note about donation segment and WC ([e04ba0f](https://github.com/Automattic/newspack-plugin/commit/e04ba0f59a8ba877ed334126fb943085f5f1dd56))
+* allow gam scripts in amp pages ([#688](https://github.com/Automattic/newspack-plugin/issues/688)) ([7d3a842](https://github.com/Automattic/newspack-plugin/commit/7d3a842df63ecc57e364413410a51d7b3c64399a))
+* **campaigns-wizard:** add segment options for subscriptions, donations ([#693](https://github.com/Automattic/newspack-plugin/issues/693)) ([519e79a](https://github.com/Automattic/newspack-plugin/commit/519e79a16f7a66982636b08df879f2553cdbc259)), closes [#249](https://github.com/Automattic/newspack-plugin/issues/249) [#250](https://github.com/Automattic/newspack-plugin/issues/250)
+* **campaigns-wizard:** display segment name in campaign card ([ece13d6](https://github.com/Automattic/newspack-plugin/commit/ece13d6c756041ab766eead40fc99758944fa876))
+* set up Campaigns segmentation UI ([#689](https://github.com/Automattic/newspack-plugin/issues/689)) ([cd1ef3f](https://github.com/Automattic/newspack-plugin/commit/cd1ef3f7ab9e85476dfb591dcfbca2c77d227efd))
+* update React Router Dom to its latest version ([#694](https://github.com/Automattic/newspack-plugin/issues/694)) ([45ad7fa](https://github.com/Automattic/newspack-plugin/commit/45ad7fad80fab46245fc5fb7d55cb6c0402edfb0))
+* use newspack-popups' preview post link ([02910dc](https://github.com/Automattic/newspack-plugin/commit/02910dc904412c80c3bc4441d808b0bc8a907d2a))
+
 # [1.23.0](https://github.com/Automattic/newspack-plugin/compare/v1.22.0...v1.23.0) (2020-10-27)
 
 

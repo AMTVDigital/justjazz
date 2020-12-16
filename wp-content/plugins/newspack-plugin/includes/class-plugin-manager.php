@@ -145,19 +145,6 @@ class Plugin_Manager {
 				'Download'    => 'wporg',
 				'EditPath'    => 'admin.php?page=jetpack',
 			],
-			'laterpay'                      => [
-				'Name'        => 'LaterPay',
-				'Description' => 'A frictionless monetization solution to convert your readers into paying customers.',
-				'Author'      => 'LaterPay',
-				'PluginURI'   => 'https://wordpress.org/plugins/laterpay/',
-				'AuthorURI'   => 'https://www.laterpay.net/',
-				'Download'    => 'wporg',
-				'EditPath'    => 'admin.php?page=laterpay-pricing-tab',
-				'Configurer'  => [
-					'filename'   => 'class-laterpay-configuration-manager.php',
-					'class_name' => 'LaterPay_Configuration_Manager',
-				],
-			],
 			'mailchimp-for-woocommerce'     => [
 				'Name'        => 'Mailchimp for WooCommerce',
 				'Description' => esc_html__( 'Connects WooCommerce to Mailchimp to sync your store data, send targeted campaigns to your customers, and sell more stuff.', 'newspack' ),
@@ -485,6 +472,9 @@ class Plugin_Manager {
 				}
 			}
 			if ( isset( $managed_plugin['WPCore'] ) ) {
+				$status = 'active';
+			}
+			if ( Newspack::is_debug_mode() ) {
 				$status = 'active';
 			}
 			$managed_plugins[ $plugin_slug ]['Status']      = $status;

@@ -56,10 +56,6 @@ class Configuration_Managers {
 			'filename'   => 'class-publish-to-apple-news-configuration-manager.php',
 			'class_name' => 'Publish_To_Apple_News_Configuration_Manager',
 		],
-		'laterpay'              => [
-			'filename'   => 'class-laterpay-configuration-manager.php',
-			'class_name' => 'LaterPay_Configuration_Manager',
-		],
 		'wordpress_seo'         => [
 			'filename'   => 'class-wordpress-seo-configuration-manager.php',
 			'class_name' => 'WordPress_SEO_Configuration_Manager',
@@ -108,6 +104,9 @@ class Configuration_Managers {
 	 * @var bool
 	 */
 	public static function is_configured( $slug ) {
+		if ( Newspack::is_debug_mode() ) {
+			return true;
+		}
 		$configuration_manager = self::configuration_manager_class_for_plugin_slug( $slug );
 		if ( is_wp_error( $configuration_manager ) ) {
 			return false;
