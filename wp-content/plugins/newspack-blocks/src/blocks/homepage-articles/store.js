@@ -90,16 +90,17 @@ const createCacheKey = JSON.stringify;
  *
  * @param {Object} block an object with a postsQuery and a clientId
  */
-function* getPosts( block ) {
+function* getPostsForBlock( block ) {
 	const cacheKey = createCacheKey( block.postsQuery );
+	const restUrl = window.newspack_blocks_data.posts_rest_url;
 	let posts = POSTS_QUERIES_CACHE[ cacheKey ];
 	if ( posts === undefined ) {
-		const path = addQueryArgs( '/wp/v2/posts', {
+		const url = addQueryArgs( restUrl, {
 			...block.postsQuery,
 			// `context=edit` is needed, so that custom REST fields are returned.
 			context: 'edit',
 		} );
-		posts = yield call( apiFetch, { path } );
+		posts = yield call( apiFetch, { url } );
 		POSTS_QUERIES_CACHE[ cacheKey ] = posts;
 	}
 
@@ -137,7 +138,7 @@ const createFetchPostsSaga = blockName => {
 			nextBlock.postsQuery.exclude = exclude;
 			let fetchedPostIds = [];
 			try {
-				fetchedPostIds = yield call( getPosts, nextBlock );
+				fetchedPostIds = yield call( getPostsForBlock, nextBlock );
 			} catch ( e ) {
 				yield put( { type: 'UPDATE_BLOCK_ERROR', clientId: nextBlock.clientId, error: e.message } );
 			}

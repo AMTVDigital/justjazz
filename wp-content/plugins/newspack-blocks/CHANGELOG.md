@@ -1,3 +1,53 @@
+# [1.21.0](https://github.com/Automattic/newspack-blocks/compare/v1.20.1...v1.21.0) (2021-02-16)
+
+
+### Features
+
+* add Portuguese translation to the blocks ([#698](https://github.com/Automattic/newspack-blocks/issues/698)) ([dedf0a3](https://github.com/Automattic/newspack-blocks/commit/dedf0a3bb2d9e898203c9a6c489aa550d7c66635))
+
+## [1.20.1](https://github.com/Automattic/newspack-blocks/compare/v1.20.0...v1.20.1) (2021-02-11)
+
+
+### Bug Fixes
+
+* override WooCommerce Memberships excerpt length in block ([#694](https://github.com/Automattic/newspack-blocks/issues/694)) ([5695de6](https://github.com/Automattic/newspack-blocks/commit/5695de651fe6abda90506315d0a4eceb6091234c))
+
+# [1.20.0](https://github.com/Automattic/newspack-blocks/compare/v1.19.0...v1.20.0) (2021-02-05)
+
+
+### Features
+
+* pass attributes to donate block render hook ([#671](https://github.com/Automattic/newspack-blocks/issues/671)) ([2d1ae81](https://github.com/Automattic/newspack-blocks/commit/2d1ae8115b911aab54b7aa692d7c873e55d69a25))
+
+# [1.19.0](https://github.com/Automattic/newspack-blocks/compare/v1.18.1...v1.19.0) (2021-01-28)
+
+
+### Bug Fixes
+
+* carousel block renders authors like homepage articles ([#680](https://github.com/Automattic/newspack-blocks/issues/680)) ([0b574c7](https://github.com/Automattic/newspack-blocks/commit/0b574c7da03a91262c2cd529139db74a32f9dad0))
+* in specific posts mode, post order should match input order ([#681](https://github.com/Automattic/newspack-blocks/issues/681)) ([1cfea8d](https://github.com/Automattic/newspack-blocks/commit/1cfea8de49bb80d7abce05b60240792fcc67a587))
+
+
+### Features
+
+* add article class for post types ([#679](https://github.com/Automattic/newspack-blocks/issues/679)) ([f493a01](https://github.com/Automattic/newspack-blocks/commit/f493a017796c9573ca8f70925e9f4c97ca740727))
+
+## [1.18.1](https://github.com/Automattic/newspack-blocks/compare/v1.18.0...v1.18.1) (2021-01-19)
+
+
+### Bug Fixes
+
+* load more button functionality ([#672](https://github.com/Automattic/newspack-blocks/issues/672)) ([4116df5](https://github.com/Automattic/newspack-blocks/commit/4116df5f3bbe303866a7b0dde8807f838c374b15))
+* **homepage-post:** handle duplicated categories ([57b6323](https://github.com/Automattic/newspack-blocks/commit/57b6323d32dd6aa96c83f07cc4e96598c009ec7e)), closes [#669](https://github.com/Automattic/newspack-blocks/issues/669)
+
+# [1.18.0](https://github.com/Automattic/newspack-blocks/compare/v1.17.1...v1.18.0) (2021-01-12)
+
+
+### Features
+
+* add optional 'continue reading' link underneath excerpts ([#656](https://github.com/Automattic/newspack-blocks/issues/656)) ([3c55a69](https://github.com/Automattic/newspack-blocks/commit/3c55a69d23d17c2cfb5e26385ffd27b0e31ba168))
+* custom endpoint for homepage posts in editor ([#661](https://github.com/Automattic/newspack-blocks/issues/661)) ([1f4880a](https://github.com/Automattic/newspack-blocks/commit/1f4880ad57e78098b719dc308f2358d5b84a0d13))
+
 ## [1.17.1](https://github.com/Automattic/newspack-blocks/compare/v1.17.0...v1.17.1) (2020-12-15)
 
 

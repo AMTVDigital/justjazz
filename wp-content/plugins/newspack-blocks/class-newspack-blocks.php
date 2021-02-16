@@ -15,6 +15,8 @@ class Newspack_Blocks {
 	 */
 	public static function init() {
 		add_action( 'after_setup_theme', [ __CLASS__, 'add_image_sizes' ] );
+		add_post_type_support( 'post', 'newspack_blocks' );
+		add_post_type_support( 'page', 'newspack_blocks' );
 	}
 
 	/**
@@ -61,8 +63,9 @@ class Newspack_Blocks {
 				'newspack-blocks-editor',
 				'newspack_blocks_data',
 				[
-					'patterns'      => self::get_patterns_for_post_type( get_post_type() ),
-					'_experimental' => self::use_experimental(),
+					'patterns'                => self::get_patterns_for_post_type( get_post_type() ),
+					'posts_rest_url'          => rest_url( 'newspack-blocks/v1/newspack-blocks-posts' ),
+					'specific_posts_rest_url' => rest_url( 'newspack-blocks/v1/newspack-blocks-specific-posts' ),
 				]
 			);
 
@@ -346,6 +349,7 @@ class Newspack_Blocks {
 			);
 		}
 
+		$post_type      = isset( $attributes['postType'] ) ? $attributes['postType'] : [ 'post' ];
 		$authors        = isset( $attributes['authors'] ) ? $attributes['authors'] : array();
 		$categories     = isset( $attributes['categories'] ) ? $attributes['categories'] : array();
 		$tags           = isset( $attributes['tags'] ) ? $attributes['tags'] : array();
@@ -354,6 +358,7 @@ class Newspack_Blocks {
 		$posts_to_show  = intval( $attributes['postsToShow'] );
 		$specific_mode  = intval( $attributes['specificMode'] );
 		$args           = array(
+			'post_type'           => $post_type,
 			'post_status'         => 'publish',
 			'suppress_filters'    => false,
 			'ignore_sticky_posts' => true,
@@ -396,7 +401,7 @@ class Newspack_Blocks {
 	 * @param array  $data          Data to be passed into the template to be included.
 	 * @return string
 	 */
-	public static function template_inc( $template, $data = array() ) {
+	public static function template_inc( $template, $data = array() ) { //phpcs:ignore VariableAnalysis.CodeAnalysis.VariableAnalysis.UnusedVariable
 		if ( ! strpos( $template, '.php' ) ) {
 			$template = $template . '.php';
 		}
@@ -448,7 +453,7 @@ class Newspack_Blocks {
 	}
 
 	/**
-	 * Prepare a list of classes based on assigned tags, categories and post formats.
+	 * Prepare a list of classes based on assigned tags, categories, post formats and types.
 	 *
 	 * @param string $post_id Post ID.
 	 * @return string CSS classes.
@@ -473,6 +478,11 @@ class Newspack_Blocks {
 		$post_format = get_post_format( $post_id );
 		if ( false !== $post_format ) {
 			$classes[] = 'format-' . $post_format;
+		}
+
+		$post_type = get_post_type( $post_id );
+		if ( false !== $post_type ) {
+			$classes[] = 'type-' . $post_type;
 		}
 
 		return implode( ' ', $classes );
@@ -512,7 +522,19 @@ class Newspack_Blocks {
 	/**
 	 * Function to check if plugin is enabled, and if there are sponsors.
 	 *
-	 * @param string $id Post ID.
+	 * @see https://github.com/Automattic/newspack-sponsors/blob/8ebf72ec4fe744bca405a1f6fe8cd5bce3a29e6a/includes/newspack-sponsors-theme-helpers.php#L35
+	 *
+	 * @param int|null    $id    ID of the post or archive term to get sponsors for.
+	 *                           If not provided, we will try to guess based on context.
+	 * @param string|null $scope Scope of the sponsors to get. Can be 'native' or
+	 *                           'underwritten'. If provided, only sponsors with the
+	 *                           matching scope will be returned. If not, all sponsors
+	 *                           will be returned regardless of scope.
+	 * @param string|null $type  Type of the $id given: 'post' or 'archive'. If not
+	 *                           provided, we will try to guess based on context.
+	 * @param array       $logo_options Optional array of logo options. Valid options:
+	 *                                  maxwidth: max width of the logo image, in pixels.
+	 *                                  maxheight: max height of the logo image, in pixels.
 	 * @return array Array of sponsors.
 	 */
 	public static function get_all_sponsors( $id = null, $scope = 'native', $type = 'post', $logo_options = array(
@@ -628,20 +650,21 @@ class Newspack_Blocks {
 	}
 
 	/**
-	 * Whether to use experimental features.
-	 *
-	 * @return bool Experimental status.
-	 */
-	public static function use_experimental() {
-		return defined( 'NEWSPACK_BLOCKS_EXPERIMENTAL' ) && NEWSPACK_BLOCKS_EXPERIMENTAL;
-	}
-
-	/**
 	 * Closure for excerpt filtering that can be added and removed.
 	 *
 	 * @var newspack_blocks_excerpt_length_closure
 	 */
 	public static $newspack_blocks_excerpt_length_closure = null;
+
+	/**
+	 * Function to override WooCommerce Membership's Excerpt Length filter.
+	 *
+	 * @return string Current post's original excerpt.
+	 */
+	public static function remove_wc_memberships_excerpt_limit() {
+		$excerpt = get_the_excerpt( get_the_id() );
+		return $excerpt;
+	}
 
 	/**
 	 * Filter for excerpt length.
@@ -653,7 +676,7 @@ class Newspack_Blocks {
 		if ( $attributes['showExcerpt'] ) {
 			self::$newspack_blocks_excerpt_length_closure = add_filter(
 				'excerpt_length',
-				function( $length ) use ( $attributes ) {
+				function() use ( $attributes ) {
 					if ( $attributes['excerptLength'] ) {
 						return $attributes['excerptLength'];
 					}
@@ -661,6 +684,7 @@ class Newspack_Blocks {
 				},
 				999
 			);
+			add_filter( 'wc_memberships_trimmed_restricted_excerpt', [ 'Newspack_Blocks', 'remove_wc_memberships_excerpt_limit' ], 999 );
 		}
 	}
 
@@ -674,7 +698,34 @@ class Newspack_Blocks {
 				self::$newspack_blocks_excerpt_length_closure,
 				999
 			);
+			remove_filter( 'wc_memberships_trimmed_restricted_excerpt', [ 'Newspack_Blocks', 'remove_wc_memberships_excerpt_limit' ] );
 		}
+	}
+
+	/**
+	 * Return a excerpt more replacement when using the 'Read More' link.
+	 */
+	public static function more_excerpt() {
+		return '…';
+	}
+
+	/**
+	 * Filter for excerpt ellipsis.
+	 *
+	 * @param array $attributes The block's attributes.
+	 */
+	public static function filter_excerpt_more( $attributes ) {
+		// If showing the 'Read More' link, modify the ellipsis.
+		if ( $attributes['showReadMore'] ) {
+			add_filter( 'excerpt_more', [ __CLASS__, 'more_excerpt' ], 999 );
+		}
+	}
+
+	/**
+	 * Remove excerpt ellipsis filter after Homepage Posts block loop.
+	 */
+	public static function remove_excerpt_more_filter() {
+		remove_filter( 'excerpt_more', [ __CLASS__, 'more_excerpt' ], 999 );
 	}
 }
 Newspack_Blocks::init();
